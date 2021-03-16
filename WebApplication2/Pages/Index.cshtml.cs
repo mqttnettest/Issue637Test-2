@@ -16,6 +16,8 @@
 
         private readonly IMqttClient mqttClient;
 
+        public string LastData;
+
         public IndexModel(IMqttClient mqttClient, IMqttClientOptions mqttClientOptions)
         {
             this.mqttClient = mqttClient;

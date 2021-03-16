@@ -1,0 +1,22 @@
+﻿@page "/"
+@inherits IndexModel
+
+<h1>MQTT Client</h1>
+
+<div>
+    <label for="lastData">Latest data:</label>
+    <textarea id="lastData" readonly>@this.LastData</textarea>
+</div>
+
+<div>
+    <label for="topic">Topic:</label>
+    <input type="text" id="topic" @bind="@this.Topic">
+    <label for="message">Message:</label>
+    <input type="text" id="message" @bind="@this.Payload">
+    <button @onclick="@this.SendMqttMessage">Send message</button>
+</div>
+
+<div>
+    <label for="status">Status:</label>
+    <textarea id="status" readonly>@this.Status</textarea>
+</div>

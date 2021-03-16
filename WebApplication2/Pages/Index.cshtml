@@ -4,7 +4,14 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div>
+    <label for="lastData">Latest data:</label>
+    <textarea id="lastData" readonly>@Model.LastData</textarea>
+</div>
+
+<div>
+    <label for="topic">Topic:</label>
+    <input type="text" id="topic">
+    <label for="message">Message:</label>
+    <input type="text" id="message">
 </div>
